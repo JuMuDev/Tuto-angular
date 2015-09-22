@@ -1,2 +1,6 @@
-# service-angular
-Tuto Angular : Développement d'une appli permettant de se connect à l'API GITHUB et récuper les détails sur les utilisateurs, les repository etc...
+# Readme pour le tuto Angular 
+=============================
+
+Chapitre : Services et Routing
+
+Objectif : Développement d'une appli permettant de se connect à l'API GITHUB et récuper les détails sur les utilisateurs, les repository etc...
