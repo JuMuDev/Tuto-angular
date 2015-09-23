@@ -1,11 +1,4 @@
-
-//===================================================================================
-
-		// 5) Le routing
-
-//====================================================================================
-
-//fonction qui s'auto provoque
+//fonction qui s'auto invoque
 (function(){
 
 //module qui qui fait référence à notre application

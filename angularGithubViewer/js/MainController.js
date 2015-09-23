@@ -3,13 +3,8 @@
 // sur les users : https://api.github.com/users/robconery
 //sur les repository : https://api.github.com/users/robconery/repos
 //sur les collaborateurs : https://api.github.com/repos/angular/angular.js/contributors
-//===================================================================================
 
-		// 5) Le routing
-
-//====================================================================================
-
-//fonction qui s'auto provoque
+//fonction qui s'auto invoque
 (function(){
 
 //keep things out of the global namespace (car pas bien) -- on utilise le module pour çà
