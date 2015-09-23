@@ -1,0 +1,20 @@
+<h2>{{repo.name}}</h2>
+
+<div>
+  Issues: {{repo.open_issues_count}}
+</div>
+
+<div>
+  <ul class="list-group">
+    <li class="list-group-item" ng-repeat="user in repo.contributors">
+      <a ng-href="#/user/{{user.login}}">
+      <img ng-src="{{user.avatar_url}}" 
+      height="42" width="42" alt="{{user.login}}"/>
+      {{user.login}}
+      </a>
+    </li>
+  </ul>
+</div>
+
+<a ng-href="#/main" class="btn btn-primary">Back to Search</a>
+<a ng-href="#/user/{{repo.owner.login}}" class="btn btn-primary">Back to {{repo.owner.login}}</a>

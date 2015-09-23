@@ -1,0 +1,48 @@
+<div class="row">
+<div class="col-xs-12 col-sm-12 center">
+	<h2>{{user.name}}</h2>
+	{{ error }}
+	<img ng-src="{{user.avatar_url}}" title="{{user.name}}">	
+</div>
+</div>
+
+<div class="row">
+<div class="col-xs-6 col-sm-3">
+	<label>Order :</label>
+	<select class="form-control" ng-model="repoSortOrder">
+		<option value="+name">Name</option>
+		<option value="-stargazers_count">Stars</option>
+		<option value="+language">Langage</option>
+	</select>
+	<a href="#/main" class="btn btn-primary">&lt; Back to search</a>	
+</div>
+<div class="col-xs-6 col-sm-9">
+	<table class="table table-striped">
+		<thead>
+			<th>Name</th>
+			<th>Stars</th>
+			<th>Language</th>
+			<!-- you can see the plus and minus before the name, stargazers, and language sections to tell what the sort order is plus is ascending -->
+		</thead>
+		<tbody>
+			<!--Like a for loop : pour chaque donneés trouvée dans repos -->
+			<tr ng-repeat="repo in repos | orderBy:repoSortOrder">
+			<!-- THIS IS LOOPING ON REPOS and then doing an order by the minus in front of stargazers_count sorts by descending order its default is ascending so you can leave off the minus or use a plus instead to get ascending order -->
+       			<td>
+        			<a href="#/repo/{{user.login}}/{{repo.name}}">
+        				{{repo.name}}
+        			</a>
+        		</td>
+        		<td>
+        			{{repo.stargazers_count | number}}
+        		</td>
+				<!-- this pipe to number is a filter in angular. You pipe your data to the filter number puts in commas and :1  puts 1 digit after decimal point-->
+          		<td>
+          			{{repo.language}}
+          		</td>
+
+      		</tr>
+  		</tbody>
+	</table>
+</div>
+</div>
